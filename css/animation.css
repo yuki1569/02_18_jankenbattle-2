@@ -1,0 +1,164 @@
+/* ダメージを受けた時のアニメーション */
+.damege {
+  animation-name: damege;
+  animation-duration: 0.5s;
+  animation-delay: 2.7s;
+}
+@keyframes damege{
+  10% {opacity: 0;}
+  30% {opacity: 1;}
+  50% {opacity: 0;}
+  70% {opacity: 1;}
+  90% {opacity: 0;}
+}
+
+/* 体力が０になった時のアニメーション */
+.hpzero {
+  animation-name: hpzero;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.9s;
+}
+
+@keyframes hpzero {
+  100% {transform: translateY(100px); opacity: 0;}
+}
+
+
+/* 味方の攻撃エフェクトアニメーションgu */
+.attac-animation {
+  animation-name: attac;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+}
+@keyframes attac {
+  0% {transform: none;}
+  50% {transform: translateX(50px);}
+  100% {transform: translateX(0);}
+}
+/* 味方の攻撃エフェクトアニメーションch */
+.attac-animationch {
+  animation-name: attacch;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  perspective-origin:top;
+  background-color: black;
+  margin-bottom: 10px;
+  width: 5px;
+  height: 40px;
+  opacity: 0;
+}
+.attac-effectch {
+  position: absolute;
+  right: 90px;
+  top: 10px;
+  z-index: 5;
+}
+@keyframes attacch {
+  0% {transform: none; }
+  50% {transform:   rotate(60deg); opacity: 1;}
+  100% {transform: translateX(-100px) translateY(100px) rotate(60deg);opacity: 0;}
+}
+/* 味方の攻撃エフェクトアニメーションpa */
+.attac-effectpa {
+  position: absolute;
+  left: 30px;
+  z-index: 5;
+  top: -100;
+}
+.attac-animationpa {
+  animation-name: attacpa;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  background-color: black;
+  margin: 10px;
+  width: 30px;
+  height: 20px;
+  opacity: 0;
+}
+@keyframes attacpa {
+  0% {transform: none; }
+  50% {transform: translateY(150px) rotate(60deg); opacity: 1;}
+  100% {width:10px ; height: 40px; transform: translateX(300px) rotate(60deg); opacity: 0;}
+}
+
+
+/* 敵の攻撃エフェクトアニメーションgu */
+.attac-animationE {
+  animation-name: attacE;
+  animation-duration: alternate;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+}
+@keyframes attacE {
+  0% {transform: none;}
+  50% {transform: translateX(-50px);}
+  100% {transform: translateX(0);}
+}
+  /* 敵の攻撃エフェクトアニメーションch */
+  .attac-effectEch {
+      position: absolute;
+      left: 150px;
+      bottom: 230px;
+      z-index: 5;
+  }
+ .attac-animationEch {
+    animation-name: attacch;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+    perspective-origin:top;
+    background-color: black;
+    margin-bottom: 10px;
+    width: 5px;
+    height: 40px;
+    opacity: 0;
+   }
+   @keyframes attacch {
+     0% {transform: none; }
+     50% {transform:   rotate(60deg); opacity: 1;}
+     100% {transform: translateX(-100px) translateY(100px) rotate(60deg);opacity: 0;}
+  }
+/* 敵の攻撃エフェクトアニメーションpa */
+.attac-effectEpa {
+  position: absolute;
+  left: 80px;
+  z-index: 5;
+  top: 170px;
+}
+.attac-animationEpa {
+  animation: attacEpa 0.5s  linear;
+  background: radial-gradient(#fff, #000);
+  animation-delay: 2.5s;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+@keyframes attacEpa {
+  0% {transform: none; opacity: 1;}
+  10% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+  20% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+  30% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109));opacity: 1;}
+  40% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+  50% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+  60% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+  70% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+    80% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+    100% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109));transform:  rotate(720deg); opacity: 0;}
+  }
+
+/* チェンジのアニメーション */
+  .change-animetion {
+    opacity: 0;
+    animation-name: change;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes change{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .opacityzero {
+    opacity: 0;
+  }

@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'mochi';
+    src: url('../font/NuKinakoMochi-Reg.woff')format('woff');
+}
+
+* {
+  font-family: 'mochi';
+  line-height: 20px;
+}
+
+html {
+  overflow: hidden;
+  font-family: 'mochi';
+}
+
+body {
+  width: 510px;
+  height:  470px;
+  border: solid 1px black;
+  margin: 0 auto;
+  position: relative;
+  font-family: 'mochi';
+}
+
+.battle-screen {
+  background-color: rgb(133,133,109);
+  width: 510px;
+  height:  470px;
+  border: solid 1px black;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+.enemyHp-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  z-index: 1;
+
+}
+.enemyHp-container span {
+  padding: 5px;
+}
+
+.enemyHp-design {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-radius: 0 0 0 5px;
+}
+
+.enemyHp-design-Arrowhead {
+  /* color: rgba(1, 1, 1, 0); */
+  border-right: 15px solid transparent;
+  border-bottom: 8px solid;
+  width: 0px;
+  position: absolute;
+  right: -10px;
+  bottom: 28px;
+}
+
+.ppE {
+  list-style: none;
+  display: flex;
+  position: relative;
+  margin: 0;
+  right: 50px;
+  margin-top: 8px;
+}
+
+.ppE > li {
+  margin-left: 20px;
+}
+
+
+.hp-container {
+  position: absolute;
+  bottom: 160px;
+  right: 10px;
+  width: 200px;
+  z-index: 5;
+  margin: 0;
+}
+.hp-container span {
+  padding: 5px;
+}
+
+.hp-design {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-radius: 0 0 5px 0 ;
+}
+
+.hp-font-container {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.hp-design-Arrowhead {
+  /* color: rgba(1, 1, 1, 0); */
+  border-left: 15px solid transparent;
+  border-bottom: 8px solid;
+  width: 0px;
+  position: relative;
+  left: -10px;
+  bottom: 8.5px;
+}
+
+.pp {
+  list-style: none;
+  display: flex;
+  position: relative;
+  margin: 0;
+  right: 50px;
+}
+
+.pp > li {
+  margin-left: 20px;
+}
+
+.img-mask-activeE {
+  width: 250px; 
+  height: 200px; 
+  background-color: rgba(133,133,109, 1);
+  position: absolute;
+   top: 160px; 
+   left: 250px; 
+   z-index: 4;
+}
+.img-mask-active {
+  width: 250px; 
+  height: 200px; 
+  background-color: rgba(133,133,109, 1);
+  position: absolute;
+   top: 270px; 
+   left: 0px; 
+   z-index: 4;
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.alliesimg {
+  align-self: flex-end;
+  z-index: 3;
+  /* background-color: seashell; */
+}
+.alliesimg img{
+  width: 200px;
+  margin-left: 10px;
+  filter: sepia(100%);
+}
+
+.enemyimg img{
+  margin-right: 50px;
+  margin-top: 30px;
+  width: 140px;
+
+  filter: sepia(100%);
+  /* transform: scale(-1, 1); */
+  z-index: 2;
+}
+
+
+
+.attac-list1 {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  width: 250px;
+  border: double 8px;
+  display: grid;
+  grid-template-columns:50% 50%;
+  background-color: rgb(133,133,109);
+  z-index: 7;
+  border-radius: 8px;
+}
+.attac-list2 {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  width: 250px;
+  border: double 8px;
+  display: grid;
+  grid-template-columns:50% 50%;
+  background-color: rgb(133,133,109);
+  z-index: 6;
+  border-radius: 8px;
+}
+
+.item-list {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  width: 250px;
+  border: double 8px;
+  display: grid;
+  grid-template-columns:50% 50%;
+  background-color: rgb(133,133,109);
+  z-index: 7;
+  border-radius: 8px;
+}
+
+.item-list-change {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  width: 250px;
+  border: double 8px;
+  display: grid;
+  grid-template-columns:50% 50%;
+  background-color: rgb(133,133,109);
+  z-index: 7;
+  border-radius: 8px;
+}
+
+.item-list-kaifuku {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  width: 250px;
+  border: double 8px;
+  display: grid;
+  grid-template-columns:50% 50%;
+  background-color: rgb(133,133,109);
+  z-index: 7;
+  border-radius: 8px;
+}
+
+.gu, .ch, .pa, .item, .cure, .change, .kaifuku, .change-fushigi, .change-hito, .change-zeni, .ppcure {
+  border: 0;
+  background-color: rgb(133,133,109);
+  width: 100%;
+  height: 100%;
+}
+
+.smallAttac {
+  background-color: rgb(133,133,109);
+  border-right: 0;
+  width: 100%;
+  height: 100%;
+}
+.specialAttac {
+  background-color: rgb(133,133,109);
+  border-left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#message {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 480px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  border: double 8px;
+  list-style: none;
+  /* display: grid; */
+  grid-template-columns:60% 50%;
+  background-color: rgb(133,133,109);
+  border-radius: 8px;
+  z-index: 5;
+
+}
+
+#message1  {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'mochi';
+}
+
+.click-none {
+  pointer-events: none;
+}

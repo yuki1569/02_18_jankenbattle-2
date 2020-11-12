@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .attac-animationpa {
+      animation-name: attacpa;
+      animation-duration: 0.5s;
+      background-color: black;
+      width: 40px;
+      height: 40px;
+      opacity: 0;
+    }
+    @keyframes attacpa {
+      0% {transform: none; }
+      50% {transform: translateY(300px) rotate(-60deg); opacity: 1;}
+      100% {transform: translateX(300px); opacity: 0;}
+    }
+    .attac-animationch {
+      animation-name: attacch;
+      animation-duration: 0.5s;
+      perspective-origin:top;
+      background-color: black;
+      width: 5px;
+      height: 40px;
+      opacity: 0;
+    }
+    @keyframes attacch {
+      0% {transform: none; }
+      50% {transform:   rotate(60deg); opacity: 1;}
+      100% {transform: translateX(-100px) translateY(100px) rotate(60deg);opacity: 0;}
+    }
+
+    .attac-animationEpa {
+      animation: attacEpa 0.5s  linear;
+      background: radial-gradient(#fff, #000);
+      
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+    @keyframes attacEpa {
+      0% {transform: none; opacity: 1;}
+      10% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+      20% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+      30% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109));opacity: 1;}
+      40% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+      50% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+      60% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+      70% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109)); opacity: 1;}
+      80% {background: radial-gradient(rgb(133,133,109), #000); opacity: 1;}
+      100% {background: radial-gradient(rgb(133,133,109), rgb(133,133,109));transform:  rotate(720deg); opacity: 0;}
+    }
+    .attac-animationEch {
+      animation-name: attacch;
+      animation-duration: 0.5s;
+      perspective-origin:top;
+      background-color: black;
+      width: 5px;
+      height: 40px;
+      opacity: 0;
+    }
+    @keyframes attacch {
+      0% {transform: none; }
+      50% {transform:   rotate(60deg); opacity: 1;}
+      100% {transform: translateX(-100px) translateY(100px) rotate(60deg);opacity: 0;}
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <div>
+    <div class="attac-animationpa"></div>
+    <div class="attac-animationpa" style="margin-left: 50px;"></div>
+    <div class="attac-animationpa"></div>
+  </div>
+
+  <div>
+    <div class="attac-animationch"></div>
+    <div class="attac-animationch" style="margin-left: 20px;"></div>
+    <div class="attac-animationch" style="margin-left: 40px;"></div>
+  </div>
+
+  <div>
+    <div class="attac-animationEpa"></div>
+  </div>
+
+  <div style="margin: 500px;">
+    <div class="attac-animationEch"></div>
+    <div class="attac-animationEch"></div>
+    <div class="attac-animationEch"></div>
+  </div>
+
+</body>
+</html>
