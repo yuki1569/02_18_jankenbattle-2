@@ -1,5 +1,5 @@
 # プロダクトのタイトル
-じゃんけんバトルhttps://yuki1569.github.io/02_18_jankenbattle/
+じゃんけんバトルhttps://yuki1569.github.io/02_18_jankenbattle-2/
 ## プロダクトの紹介
 - ポケモンバトル風のゲームをつくりました。
 - 通常のじゃんけん要素にバトル要素を加えました。
