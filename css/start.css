@@ -55,6 +55,20 @@
   animation-timing-function: linear;
   overflow: hidden;
 }
+.mask1-animetion2 {
+  background-color: 	rgb(14,15,7);
+  animation-name: move3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  overflow: hidden;
+}
+.mask2-animetion2 {
+  background-color:	rgb(14,15,7);
+  animation-name: move4;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  overflow: hidden;
+}
 
 @keyframes move1{
   0% {transform: translateX(0);}
@@ -70,6 +84,14 @@
   40% {background-color:black;}
   60% {background-color:white;}
   80% {background-color:black;}
+  100% {transform: translateX(50%);}
+}
+@keyframes move3{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-50%);}
+}
+@keyframes move4{
+  0% {transform: translateX(0);}
   100% {transform: translateX(50%);}
 }
 

@@ -8,22 +8,30 @@
   $(".item-list-kaifuku").hide();
   
 
-
   $(".start").on('click', function () {
+    // $(".mask1").addClass("mask1-animetion2");
+    // $(".mask2").addClass("mask2-animetion2").on('animationend', function () {
+    // });
+    $(".mask1").removeClass("mask1-animetion2");
+    $(".mask2").removeClass("mask2-animetion2");
     $(".start-screen").hide();
     $(".choice-screen").show();
-    $("#message1-choice").t('このゲームはじゃんけんバトルです<br>じゃんけんにかてばダメージを与えることができます<br>てきは３体です<br>すべてのてきをたおしたらかちです<br>ぎゃくに手持ちのモンスターがぜんめつしたらまけです。', {
+    $(".choice-mask").addClass("choice-mask-active");
+    $("#message1-choice").t('このゲームはポ〇モンバトル風じゃんけんゲームです。<br>じゃんけんにかてば相手にダメージをあたえることができ、<br>まければダメージをうけます。てきは３体です。<br>すべてのてきをたおしたらかちです<br>手持ちのモンスターがぜんめつしたらまけとなります。', {
       caret: false, speed: 50,
     });
   });
+  
   $("#message1-choice").one('click', function () {
-    $("#message1-choice").t('さいしょのモンスターをえらんでください<br>hp: 体力　gu: ク”ーのつよさ<br>ch: チョキのつよさ　pa: パーのつよさ<br>キャラクターによってじゃんけんの出せるてかずがちがいます<br>hpやpp(じゃんけんのてかず)がへったらアイテムを使用しましょう', {
+    $(".choice-mask").removeClass("choice-mask-active");
+    $("#message1-choice").t('さいしょのモンスターをえらんでください<br>hp: 体力　gu: ク”ーのつよさ<br>ch: チョキのつよさ　pa: パーのつよさ<br>キャラクターによってじゃんけんの出せるてかずがちがいます<br>hpやpp(じゃんけんのてかず)がへったらアイテムを使用したりこうたいを使いましょう', {
       caret: false, speed: 50,
     });
   });
 
   function choiceclick() {
     $(".choice-screen").hide();
+    $(".choice-mask").hide();
     $(".start-screen").show();
     $(".mask1").addClass("mask1-animetion")
     $(".mask2").addClass("mask2-animetion").on('animationend', function () {
@@ -95,25 +103,26 @@
 
   let characterchoice = [];
   let charatypecolumn = [
-    { name: "フシギダネ", gupower: 20, chpower: 20, papower: 40, img: "img/fushigi.png", hp: 120, maxhp: 120, gupp: 5, chpp: 4, papp: 3, maxgupp: 5, maxchpp: 4, maxpapp: 3 },
-    { name: "ヒトカゲ", gupower: 20, chpower: 50, papower: 20, img: "img/hito.png", hp: 100, maxhp: 100, gupp: 4, chpp: 3, papp: 5, maxgupp: 4, maxchpp: 3, maxpapp: 5 },
-    { name: "ゼニガメ", gupower: 40, chpower: 10, papower: 30, img: "img/zeni.png", hp: 150, maxhp: 150, gupp: 3, chpp: 8, papp: 5, maxgupp: 3, maxchpp: 8, maxpapp: 5 },
+    { name: "フシギダ〇", gupower: 20, chpower: 20, papower: 40, img: "img/fushigi.png", hp: 120, maxhp: 120, gupp: 5, chpp: 4, papp: 3, maxgupp: 5, maxchpp: 4, maxpapp: 3 },
+    { name: "ヒト〇ゲ", gupower: 20, chpower: 50, papower: 20, img: "img/hito.png", hp: 100, maxhp: 100, gupp: 4, chpp: 3, papp: 5, maxgupp: 4, maxchpp: 3, maxpapp: 5 },
+    { name: "ゼ〇ガメ", gupower: 40, chpower: 10, papower: 30, img: "img/zeni.png", hp: 150, maxhp: 150, gupp: 3, chpp: 8, papp: 5, maxgupp: 3, maxchpp: 8, maxpapp: 5 },
   ]
 
   let name = [".status-infofushigi", ".status-infohito", ".status-infozeni"];
   for (let i = 0; i < 3; i++) {
-    $(`${name[i]} li:nth-of-type(1)`).text(`hp: ${charatypecolumn[i].maxhp}`);
-    $(`${name[i]} li:nth-of-type(2)`).text(`gu: ${charatypecolumn[i].gupower}`);
-    $(`${name[i]} li:nth-of-type(3)`).text(`ch: ${charatypecolumn[i].chpower}`);
-    $(`${name[i]} li:nth-of-type(4)`).text(`pa: ${charatypecolumn[i].papower}`);
+    $(`${name[i]} li:nth-of-type(1)`).text(` ${charatypecolumn[i].name}`);
+    $(`${name[i]} li:nth-of-type(2)`).text(`hp: ${charatypecolumn[i].maxhp}`);
+    $(`${name[i]} li:nth-of-type(3)`).text(`gu: ${charatypecolumn[i].gupower}`);
+    $(`${name[i]} li:nth-of-type(4)`).text(`ch: ${charatypecolumn[i].chpower}`);
+    $(`${name[i]} li:nth-of-type(5)`).text(`pa: ${charatypecolumn[i].papower}`);
   }
 
 
 
   let charatypecolumnE = [
-    { name: "ヤドン", maxhp: 150, gupower: 40, chpower: 20, papower: 20, img: "img/yadon.png", gupp: 4, chpp: 5, papp: 6 },
-    { name: "ピカチュウ", maxhp: 110, gupower: 20, chpower: 30, papower: 50, img: "img/pika.png", gupp: 6, chpp: 4, papp: 3 },
-    { name: "カモネギ", maxhp: 130, gupower: 20, chpower: 40, papower: 20, img: "img/kamo.png", gupp: 4, chpp: 4, papp: 4 },
+    { name: "ヤド〇", maxhp: 150, gupower: 40, chpower: 20, papower: 20, img: "img/yadon.png", gupp: 4, chpp: 5, papp: 6 },
+    { name: "ピカチ〇ウ", maxhp: 110, gupower: 20, chpower: 30, papower: 50, img: "img/pika.png", gupp: 6, chpp: 4, papp: 3 },
+    { name: "カ〇ネギ", maxhp: 130, gupower: 20, chpower: 40, papower: 20, img: "img/kamo.png", gupp: 4, chpp: 4, papp: 4 },
   ]
 
   const type = ['gu', 'ch', 'pa', 'cure', 'ppcure'];

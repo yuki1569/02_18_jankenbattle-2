@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,185 +13,170 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
+
 <body></body>
-  <div class="start-screen">
-    <div class="mask1"></div>
-    <div class="mask2"></div>
-    <div class="start">start</div>
-  </div>
-  <!-- <main class="start-screen"></main> -->
-  <div class="choice-screen">
-    <!-- <div class="status-info">
+<div class="start-screen">
+  <div class="mask1"></div>
+  <div class="mask2"></div>
+  <div class="start">start</div>
+</div>
+<!-- <main class="start-screen"></main> -->
+<div class="choice-screen">
+  <div class="choice-mask"></div>
+  <div class="choice-container">
+    <div class="fushig">
+      <img class="fushigi" src="img/fushigi2.png" alt="">
       <ul class="status-infofushigi">
         <li>a</li>
         <li>b</li>
         <li>c</li>
         <li>d</li>
+        <li>d</li>
       </ul>
+    </div>
+    <div>
+      <img class="hito" src="img/hito2.png" alt="">
       <ul class="status-infohito">
         <li>a</li>
         <li>b</li>
         <li>c</li>
         <li>d</li>
+        <li>d</li>
       </ul>
+    </div>
+    <div>
+      <img class="zeni" src="img/zeni2.png" alt="">
       <ul class="status-infozeni">
         <li>a</li>
         <li>b</li>
         <li>c</li>
         <li>d</li>
-      </ul>
-    </div> -->
-    <div class="choice-container">
-      <div class="fushig">
-        <img class="fushigi" src="img/fushigi2.png" alt="">
-        <ul class="status-infofushigi">
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-          <li>d</li>
-        </ul>
-      </div>
-      <div>
-        <img class="hito" src="img/hito2.png" alt="">
-        <ul class="status-infohito">
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-          <li>d</li>
-        </ul>
-      </div>
-      <div>
-        <img class="zeni" src="img/zeni2.png" alt="">
-        <ul class="status-infozeni">
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-          <li>d</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <ul id="message-choice">
-        <li id="message1-choice"></li>
+        <li>d</li>
       </ul>
     </div>
   </div>
-
-  <div class="battle-screen">
-
-
-    <div class="enemyHp-container">
-      <span class="nameE">敵の名前</span><br>
-      <div class="enemyHp-design">
-        <span>Hp</span><span class="hpE"></span><span>/</span><span class="maxHpE"></span>
-      </div>
-      <div class="enemyHp-design-Arrowhead"></div>
-      <ul class="ppE">
-        <li>gu:<span class="guppE"></span></li>
-        <li>ch:<span class="chppE"></span></li>
-        <li>pa:<span class="pappE"></span></li>
-      </ul>
-    </div>
-
-    <div class="hp-container">
-      <div class="hp-design">
-        <div class="hp-font-container">
-          <span class="name">味方名前</span><br>
-          <span>Hp </span><span class="hp"></span><span>/</span><span class="maxHp"></span>
-        </div>
-      </div>
-      <div class="hp-design-Arrowhead"></div>
-      <ul class="pp">
-        <li>gu:<span class="gupp"></span></li>
-        <li>ch:<span class="chpp"></span></li>
-        <li>pa:<span class="papp"></span></li>
-      </ul>
-    </div>
-
-    <!-- 味方の攻撃エフェクト用pa -->
-    <div class="attac-effectpa">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-    <!-- 味方の攻撃エフェクト用ch -->
-    <div class="attac-effectch">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-
-    <!-- 敵の攻撃エフェクト用pa -->
-    <div class="attac-effectEpa">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-    <!-- 敵の攻撃エフェクト用ch -->
-    <div class="attac-effectEch">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-    
-    <div class="img-maskE"></div>
-    <div class="img-mask"></div>
-
-    <div class="img-container">
-      <div class="alliesimg">
-        <img src="" alt="">
-      </div>
-
-
-      <div class="enemyimg">
-        <span></span>
-        <img src="" alt="">
-      </div>
-    </div>
-  
-
-    
-     <ul class="attac-list1">
-      <li ><button class="gu">gu</button></li>
-      <li ><button class="ch">ch</button></li>
-      <li ><button class="pa">pa</button></li>
-      <li ><button class="item">こうたい/<br>アイテム</button></li>
+  <div>
+    <ul id="message-choice">
+      <li id="message1-choice"></li>
     </ul>
-    
-    <ul class="attac-list2">
-      <li ><button class="smallAttac attac">ノーマルこうげき</button></li>
-      <li ><button class="specialAttac attac">２倍こうげき</button></li>
-    </ul>
-
-    <ul class="item-list">
-      <li><button class="change">こうたい</button></li>
-      <li><button class="kaifuku">アイテム</button></li>
-    </ul>
-
-    <ul class="item-list-change">
-      <li><button class="change-fushigi">フシギダネ</button></li>
-      <li><button class="change-hito">ヒトカゲ</button></li>
-      <li><button class="change-zeni">ゼニガメ</button></li>
-    </ul>
-
-    <ul class="item-list-kaifuku">
-      <li><button class="cure">きずぐすり</button></li>
-      <li><button class="ppcure">PPかいふく</button></li>
-    </ul>
-    
-    <div>
-      <ul id="message">
-        <li id="message1"></li>
-      </ul>
-    </div>
-
   </div>
-  <script src="js/start.js"></script>
-  <script src="js/main.js"></script>
-  <script src="t.js-master/t.js"></script>
-  <script src="t.js-master/t.min.js"></script>
-  <script src="js/animation.js"></script>
-  <script>
+</div>
+
+<div class="battle-screen">
+
+
+  <div class="enemyHp-container">
+    <span class="nameE">敵の名前</span><br>
+    <div class="enemyHp-design">
+      <span>Hp</span><span class="hpE"></span><span>/</span><span class="maxHpE"></span>
+    </div>
+    <div class="enemyHp-design-Arrowhead"></div>
+    <ul class="ppE">
+      <li>gu:<span class="guppE"></span></li>
+      <li>ch:<span class="chppE"></span></li>
+      <li>pa:<span class="pappE"></span></li>
+    </ul>
+  </div>
+
+  <div class="hp-container">
+    <div class="hp-design">
+      <div class="hp-font-container">
+        <span class="name">味方名前</span><br>
+        <span>Hp </span><span class="hp"></span><span>/</span><span class="maxHp"></span>
+      </div>
+    </div>
+    <div class="hp-design-Arrowhead"></div>
+    <ul class="pp">
+      <li>gu:<span class="gupp"></span></li>
+      <li>ch:<span class="chpp"></span></li>
+      <li>pa:<span class="papp"></span></li>
+    </ul>
+  </div>
+
+  <!-- 味方の攻撃エフェクト用pa -->
+  <div class="attac-effectpa">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+  <!-- 味方の攻撃エフェクト用ch -->
+  <div class="attac-effectch">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+
+  <!-- 敵の攻撃エフェクト用pa -->
+  <div class="attac-effectEpa">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+  <!-- 敵の攻撃エフェクト用ch -->
+  <div class="attac-effectEch">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+
+  <div class="img-maskE"></div>
+  <div class="img-mask"></div>
+
+  <div class="img-container">
+    <div class="alliesimg">
+      <img src="" alt="">
+    </div>
+
+
+    <div class="enemyimg">
+      <span></span>
+      <img src="" alt="">
+    </div>
+  </div>
+
+
+
+  <ul class="attac-list1">
+    <li><button class="gu">gu</button></li>
+    <li><button class="ch">ch</button></li>
+    <li><button class="pa">pa</button></li>
+    <li><button class="item">こうたい/<br>アイテム</button></li>
+  </ul>
+
+  <ul class="attac-list2">
+    <li><button class="smallAttac attac">ノーマルこうげき</button></li>
+    <li><button class="specialAttac attac">２倍こうげき</button></li>
+  </ul>
+
+  <ul class="item-list">
+    <li><button class="change">こうたい</button></li>
+    <li><button class="kaifuku">アイテム</button></li>
+  </ul>
+
+  <ul class="item-list-change">
+    <li><button class="change-fushigi">フシギダ〇</button><br>aa</li>
+    <li><button class="change-hito">ヒト〇ゲ</button></li>
+    <li><button class="change-zeni">ゼ〇ガメ</button></li>
+  </ul>
+
+  <ul class="item-list-kaifuku">
+    <li><button class="cure">きずぐすり</button></li>
+    <li><button class="ppcure">PPかいふく</button></li>
+  </ul>
+
+  <div>
+    <ul id="message">
+      <li id="message1"></li>
+    </ul>
+  </div>
+
+</div>
+<script src="js/start.js"></script>
+<script src="js/main.js"></script>
+<script src="t.js-master/t.js"></script>
+<script src="t.js-master/t.min.js"></script>
+<script src="js/animation.js"></script>
+<script>
     // $("#message").t({
     //     speed: 120,               // 文字の表示スピード。タイピングのスピード。
     //     speed_vary: true,         // 「true」にすると人間が入力しているかのように文字ごとのスピード。
@@ -201,6 +187,7 @@
     //     blink: false,             // カーソルを点滅させるかどうか。
     //   });
 
-  </script>
+</script>
 </body>
+
 </html>
